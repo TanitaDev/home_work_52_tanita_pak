@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<p>Hi</p>
+{% for todo in todos %}
+<div class="todo_block">
+    <p class="todo_item">
+        {{ todo }}
+    </p>
+</div>
+{% endfor %}
 </body>
 </html>
