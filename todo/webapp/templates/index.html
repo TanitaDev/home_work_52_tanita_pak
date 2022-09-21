@@ -5,12 +5,9 @@
     <title>Title</title>
 </head>
 <body>
-<p>Hi</p>
 {% for todo in todos %}
-<div class="todo_block">
-    <p class="todo_item">
-        {{ todo }}
-    </p>
+<div>
+    <p>{{todo}}</p>
 </div>
 {% endfor %}
 </body>
