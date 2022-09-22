@@ -5,6 +5,11 @@
     <title>Title</title>
 </head>
 <body>
+
+<form action="/" method="POST">
+    {{form.title}}
+    <input type="submit", name="Create Todo">
+</form>
 {% for todo in todos %}
 <div>
     <p>{{todo}}</p>
