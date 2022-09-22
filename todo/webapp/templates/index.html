@@ -1,19 +1,25 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <title>Title</title>
 </head>
 <body>
-
-<form action="/" method="POST">
+<div class="center-column" >
+    <form action="/" method="POST">
+    {% csrf_token %}
     {{form.title}}
     <input type="submit", name="Create Todo">
 </form>
 {% for todo in todos %}
 <div>
+    <a href="{% url 'update' todo.id %}">Изменить</a>
     <p>{{todo}}</p>
+    <input type="submit" name="delete_todo" id="" placeholder="Delete">
 </div>
 {% endfor %}
+</div>
 </body>
 </html>
