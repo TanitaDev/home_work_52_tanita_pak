@@ -7,19 +7,17 @@
     <title>Title</title>
 </head>
 <body>
-<div class="center-column" >
+<div class="center-column">
     <form action="/" method="POST">
-    {% csrf_token %}
-    {{form.title}}
-    <input type="submit", name="Create Todo">
-</form>
-{% for todo in todos %}
-<div>
-    <a href="{% url 'update' todo.id %}">Изменить</a>
-    <p>{{todo}}</p>
-    <input type="submit" name="delete_todo" id="" placeholder="Delete">
-</div>
-{% endfor %}
+        {% csrf_token %}
+        {{form.title}}
+        <input type="submit" , name="Create Todo" value="Добавить задачу">
+    </form>
+    {% for todo in todos %}
+    <div>
+        <p>{{todo}}</p>
+    </div>
+    {% endfor %}
 </div>
 </body>
 </html>
